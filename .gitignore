@@ -1,0 +1,9 @@
+/public/vendor/
+/vendor/
+/composer.lock
+/error/*.log
+
+*.png
+*.jpg
+*.gif
+*.ini
