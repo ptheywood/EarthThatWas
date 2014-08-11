@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+  margin: 0;
+}
+
+/* 
+Push the vairable height gfooter down using gross table stuff.
+http://stackoverflow.com/questions/9126777/keep-footer-with-variable-height-on-bottom
+*/
+body {
+  background: #191919;
+  color: #ccc;
+}
+
+.footer {
+  border-top: 1px solid #000;
+}
+
+.sponsor {
+  padding: 32px;
+  margin: 12px auto;
+  border-radius: 12px;
+  min-height: 100px;
+}
+
+
+
+@media screen and (min-width: 768px){
+  /* Pushed down footer for non-mobile devices, it breaks table width on mobile. */
+  body {
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+
+  .not-the-footer {
+    display: table-row;
+    height: 100%;
+  }
+
+  .footer {
+    display: table-row;
+  }
+}

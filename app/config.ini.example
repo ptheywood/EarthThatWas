@@ -1,0 +1,6 @@
+[application_settings]
+title = "Earth That Was"
+
+[project_dirs]
+project_dirs[] = "/path/to/project/dir/"
+project_dirs[] = "/path/to/extra/dir/"

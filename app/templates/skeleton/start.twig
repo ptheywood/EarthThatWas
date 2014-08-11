@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{% if page.title is defined %}{{page.title}} | {%endif%}</title>
+
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        <link href="/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin+Sketch:700' rel='stylesheet' type='text/css'>
+
+        <link href="/assets/css/style.css" rel="stylesheet">
+        {% if page.extraCSS %}
+            {% for css in page.extraCSS %}
+                <link href="{{css}}" rel="stylesheet">
+            {% endfor %}
+        {% endif %}
+    </head>
+    <body>
