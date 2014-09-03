@@ -8,7 +8,7 @@ Push the vairable height gfooter down using gross table stuff.
 http://stackoverflow.com/questions/9126777/keep-footer-with-variable-height-on-bottom
 */
 body {
-  background: #191919;
+  background: #222222;
   color: #ccc;
 }
 
@@ -23,6 +23,53 @@ body {
   min-height: 100px;
 }
 
+.well {
+  background: #424242;
+  border-color: #4F4F4F;
+}
+.well > h2 {
+  margin-top: 2px;
+}
+
+.list-group-item {
+  color: #DDD;
+  background-color: #333;
+  border: 1px solid #222;
+}
+a.list-group-item {
+  color: #DDD;
+}
+a.list-group-item:hover, 
+a.list-group-item:focus {
+  color: #DDD;
+  text-decoration: none;
+  background-color: #444;
+}
+
+.label-default {
+  background-color: #424242;
+  color: #eee;
+  border: 1px solid #4F4F4F;
+}
+
+.label-block,
+.label-block-xs {
+  display: block;
+  margin: 10px auto;
+}
+
+.text-left-xs {
+  text-align: left;
+}
+.text-center-xs {
+  text-align: center;
+}
+.text-right-xs {
+  text-align: right;
+}
+.text-justify-xs {
+  text-align: justify;
+}
 
 
 @media screen and (min-width: 768px){
@@ -41,4 +88,34 @@ body {
   .footer {
     display: table-row;
   }
+
+  .pull-left-sm {
+    float: left!important;
+  }
+  .pull-right-sm {
+    float: right!important;
+  }
+
+  .text-left-sm {
+    text-align: left;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .text-right-sm {
+    text-align: right;
+  }
+  .text-justify-sm {
+    text-align: justify;
+  }
+  .label-block-xs {
+    display: inline;
+    margin: auto;
+  }
+  .label-block-sm {
+    display: block;
+    margin: 10px auto;
+  }
 }
+
+

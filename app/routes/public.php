@@ -6,9 +6,9 @@
 
 $app->get('/', function () use ($app) {
     // Data to be output
-    $confArr = $app->config('config');
+    $config = $app->config('config');
     $viewData = array(
-            "config" => $app->config('config'),
+            "config" => $config,
             "hostname" => gethostname(),
     );
     $app->render('earththatwas.twig', $viewData);

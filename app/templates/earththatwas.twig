@@ -3,23 +3,31 @@
 <div class="content">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <h2>Projects</h2>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-12 col-md-8">
-                <div class="list-group">
-                    <a class="list-group-item" href="#">Title</a>
+            <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-">
+                <div class="well">
+                    <h2>Projects</h2>
+                    <p>
+                        The following is a list of locally hosted projects
+                    </p>
+                    {% for group, projects in groupedProjects %}
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4>{{ group }}</h4>
+                            </div>
+                            <div class="list-group">
+                                {% for project in projects %}
+                                    <a class="list-group-item" href="{{project.href}}">
+                                        {{project.title}}
+                                        <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
-            </div>
-            <div class="col-xs-12 col-md-4 text-right">
-                <p>
-                    This is a list of projects being hosted on the local machine.
-                </p>
             </div>
         </div>
     </div>
-</div>{% include 'skeleton/footer.twig' %}
+</div>
+{% include 'skeleton/footer.twig' %}
 {% include 'skeleton/end.twig' %}
