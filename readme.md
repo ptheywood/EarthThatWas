@@ -23,5 +23,5 @@ Download dependencies via [Composer](http://getcomposer.org) and [Bower](http://
 Point the apache host to the `/public/` folder containing `index.php` and `.htaccess`
 
 
-Edit application configuration file located at`/app/config.ini`
+Configure the application by creating `/app/config.ini`, an example can be found at [`/app/config.ini.example`](app/config.ini.example)
 

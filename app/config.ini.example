@@ -1,10 +1,17 @@
+; Example configuration file, please update appropriatly and save as `/app/config.ini`
+; @author Peter Heywood <peethwd@gmail.com>
+
 [application_settings]
 title = "Earth That Was"
 
 [project_dirs]
+; List of directories to look for your projects in.
 project_dirs[] = "/path/to/project/dir/"
 project_dirs[] = "/path/to/extra/dir/"
 
 [url_patterns]
+; List of patterns to map projects arrays too. 
+; Each entry correlates to one in the "project_dirs" section
+; The `{:}` sequence is replaces by the projects folder name
 url_patterns[] = "http://{:}.host/"
 url_patterns[] = "http://host/{:}"
