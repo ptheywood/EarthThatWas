@@ -108,14 +108,31 @@ class Project {
                         }
                     }
                 } else {
-                    // Error - invalid config
+                    // Error - invalid config @todo
                     var_dump("err - invalid config dir: ".$dir);
                 }
                 $groupedProjects[$dir] = $projects;
             }
         } else {
-            // Error - dirs not an array.
+            // Error - dirs not an array. @todo
         }
         return $groupedProjects;
+    }
+
+    /**
+     * Project::loadProjects($dirs, $urlPatterns) lazy method extracting the approprate data from $config instead.
+     * @param  array $config Configuration array - from the \EarthThatWas\Config class.
+     * @return array         array of projects
+     */
+    public static function loadProjectsViaConfig($config){
+        if(is_array($config)){
+            $projectDirs = isset($config["project_dirs"]) ? $config["project_dirs"] : array();
+            $urlPatterns = isset($config["url_patterns"]) ? $config["url_patterns"] : array();
+            return self::loadProjects($projectDirs, $urlPatterns);
+        } else {
+            // Error - invalid config. Just silentlt fail for now. @todo
+            return array();
+        }
+
     }
 }
