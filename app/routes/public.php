@@ -9,6 +9,7 @@ $app->get('/', function () use ($app) {
     $confArr = $app->config('config');
     $viewData = array(
             "config" => $app->config('config'),
+            "hostname" => gethostname(),
     );
     $app->render('earththatwas.twig', $viewData);
 });
